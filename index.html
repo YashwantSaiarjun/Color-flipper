@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=devce-width,initial-scale=1"/>
+        <title>color flipper</title>
+        <style>
+            .nav{
+                background-color:rgb(32, 25, 25);
+                width: 100%;
+                padding: 0.5%;
+                color: cyan;
+                text-align: center;
+                font-size: larger;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            body{
+                width: 100%;
+                background-color: burlywood;
+            }
+            #btn{
+                padding-left: 1cm;
+                padding-right: 1cm;
+                padding-top: 0.2cm;
+                padding-bottom: 0.2cm;
+                background-color: rgb(12, 59, 55);
+                font-size: medium;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: white;
+                font-weight: 200;
+                border-color: white;
+            
+            }
+           .div1{
+                text-align: center;
+                font-size: medium;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: white;
+           }
+           .btn-div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+                <p>COLOR FLIPPER</p>
+        </div>
+        <script>
+            function flipcolor(){
+                var bgcolor=new Array("#FF5733","#2ED314","#14D393","#1C14D3","#1C14D3","#E00A2A","#AC0AE0","#E0720A");
+                var d=bgcolor[Math.floor(Math.random()*bgcolor.length)];
+                document.body.style.background=d;
+                document.getElementById("demo").innerHTML=d;
+            }
+        </script> 
+        <main>
+            <br>
+            <br>
+            <br>
+            <div class="btn-div">
+                <input type="button" id="btn" onclick="flipcolor()" value="Click here"/>   
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="div1">
+                <span id="p1">
+                    <strong>COLOR CODE:</strong> 
+                </span>
+                <span id="demo"></span>
+            </div>
+        </main>
+    </body>
+</html>
